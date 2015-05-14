@@ -14,9 +14,9 @@
 
 * Twitter bootstrap for rails
 
-##Dokumentation
+##Documentation
 
-* All dokumentation is stored in folder "docs". Made in Latex
+* All documentation is stored in folder "docs". Made in Latex
 
 
 ## Running the project
