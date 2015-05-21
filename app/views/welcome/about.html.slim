@@ -1,6 +1,22 @@
-h1 Welcome#about
-p Find me in app/views/welcome/about.html.slim
+h1 O projekcie
+
+.section
+  p 1. Stwórz mapę
+.section
+  p 2. Zaimportuj
+.section
+  p 3. Prezentuj
+.section
+  p 4. Edytuj
+
+.section 5. Podziel się swoim dziełem!
 
 br
 
-p You should think about how to introduce our project in the user-friendly form and then type this content here.
+.section
+  h2.title Najnowsze mapy
+  ul
+    = render @maps
+
+- if can? :create, Map
+  = link_to "Dodaj nową", new_user_map_path(current_user), class: "btn btn-primary"

@@ -1,0 +1,4 @@
+pl:
+  maps:
+    map:
+      made_by: " Utworzona przez <strong>%{author}</strong>"

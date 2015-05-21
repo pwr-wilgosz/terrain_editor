@@ -1,4 +1,6 @@
-h1 Listing maps
+h1 Ostatnio dodane mapy
 
 ul
   = render @maps
+
+= link_to "Dodaj nową", new_user_map_path(current_user), class: "btn btn-primary"

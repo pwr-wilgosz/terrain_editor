@@ -1,5 +1,5 @@
 li
   span.name = link_to map.name, map
-  span.user = " made by #{map.user}"
+  span.user = t(".made_by", author:  map.user).html_safe
 
 

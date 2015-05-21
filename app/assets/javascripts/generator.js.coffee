@@ -39,6 +39,12 @@ init = ->
       Settings.wrapper.find(".content").append cvs()
       resizeHandler()
       window.onresize = resizeHandler
+  toggle_play()
+
+toggle_play = ->
+  $(".play-btn").on "click", ->
+    $(this).find("i").toggleClass("fa-play").toggleClass("fa-pause")
+
 
 stop = ->
   if Settings.wrapper.length == 0

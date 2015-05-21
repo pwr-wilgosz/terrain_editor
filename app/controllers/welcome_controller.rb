@@ -3,6 +3,7 @@ class WelcomeController < ApplicationController
   end
 
   def about
+    @maps = Map.all
   end
 
   def contact

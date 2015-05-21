@@ -7,6 +7,6 @@ class User < ActiveRecord::Base
   has_many :maps
 
   def to_s
-    nickname || email.split("@").first
+    (nickname.present? ? nickname : email.split("@").first).titleize
   end
 end
