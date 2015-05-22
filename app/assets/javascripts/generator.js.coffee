@@ -26,7 +26,7 @@ ang = ->
 
 init = ->
   init_settings()
-  unless stop()
+  unless stop_for_other_screen()
     # add Settings.points
     map_id = Settings.wrapper.data("id")
     $.ajax
@@ -44,14 +44,27 @@ init = ->
 toggle_play = ->
   $(".play-btn").on "click", ->
     $(this).find("i").toggleClass("fa-play").toggleClass("fa-pause")
+    if Settings.stop
+      start()
+      update()
+    else
+      stop()
 
-
-stop = ->
+stop_for_other_screen = ->
   if Settings.wrapper.length == 0
     Settings.stop = true
     return true
   else
     return false
+
+stop = ->
+  Settings.stop = true
+  return true
+
+start = ->
+  Settings.stop = false
+  return true
+
 
 update = ->
   # clear canvas
