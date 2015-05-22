@@ -1,8 +1,8 @@
 class Map < ActiveRecord::Base
   belongs_to :user
 
-  has_many :points
-  has_many :edges
+  has_many :points, dependent: :destroy
+  has_many :edges, dependent: :destroy
 
   validates :name, presence: true
 
