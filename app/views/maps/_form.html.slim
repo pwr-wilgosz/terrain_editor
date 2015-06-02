@@ -2,7 +2,8 @@
   = f.error_notification
 
   .form-inputs
+    = f.input :name
     = f.association :user
-
+    = f.file_field :file
   .form-actions
     = f.button :submit

@@ -22,6 +22,9 @@ gem 'active_attr'
 
 gem 'cancancan'
 
+# csv import
+gem 'roo', '~> 2.0.0'
+
 group :development, :test do
   gem 'sqlite3'
   gem 'byebug'

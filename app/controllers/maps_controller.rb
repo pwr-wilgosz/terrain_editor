@@ -16,8 +16,7 @@ class MapsController < ApplicationController
   def create
     respond_to do |format|
       if @map.save
-        format.html { redirect_to @map, notice: 'Map was successfully created.' }
-        format.json { render :show, status: :created, location: @map }
+        format.html { redirect_to @map, notice: 'Map was successfully imported.' }
       else
         format.html { render :new }
         format.json { render json: @map.errors, status: :unprocessable_entity }
@@ -49,6 +48,6 @@ class MapsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def map_params
-      params.require(:map).permit(:user_id)
+      params.require(:map).permit(:user_id, :name, :file)
     end
 end
