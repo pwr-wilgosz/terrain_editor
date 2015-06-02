@@ -2,8 +2,9 @@
 section#contact
   .container
     .row.margint20.marginb40
-      h1.page-title.marginb20 = t(".title")
-      hr.tall
-      .col-md-8.center
-        = render "shared/flash"
-        = render "shared/contact_form"
+      .form-wrapper
+        h1.page-title.marginb20 = t(".title")
+        hr.tall
+        .col-md-12.center
+          = render "shared/flash"
+          = render "shared/contact_form"

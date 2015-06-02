@@ -2,8 +2,8 @@
   = f.error_notification
 
   .form-inputs
-    = f.input :name
-    = f.association :user
-    = f.file_field :file
+    = f.input :name, placeholder: "Nazwa mapy", label: false
+    = f.association :user, label: false, include_blank: "<< Autor >>"
+    = f.input :file, as: :file, label: false, input_html: { class: "btn btn-file btn-default" }
   .form-actions
     = f.button :submit

@@ -2,15 +2,11 @@ p#notice = notice
 
 #map-wrapper data-id==@map.id
   .header
+    = link_to 'Edit', edit_map_path(@map), class: "btn btn-default"
     h3 = @map.name
-    p
+    span
       strong Made by:
       = " #{ @map.user }"
-
   .content
     .play-btn
       i.fa.fa-pause.fa-2x
-
-  .footer
-  = link_to 'Edit', edit_map_path(@map)
-  '|

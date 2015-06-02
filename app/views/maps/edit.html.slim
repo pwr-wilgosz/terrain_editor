@@ -1,8 +1,9 @@
-h1 Editing map
+.form-wrapper
+  h1 Edycja mapy
 
-== render 'form'
+  == render 'form'
 
-= link_to 'Show', @map
-'|
-= link_to 'Back', @map.user
+  .action-links
+    = link_to 'Show', @map
+    = link_to 'Back', @map.user
 

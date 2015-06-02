@@ -1,22 +1,19 @@
 h1 O projekcie
 
-.section
-  p 1. Stwórz mapę
-.section
-  p 2. Zaimportuj
-.section
-  p 3. Prezentuj
-.section
-  p 4. Edytuj
+.text-block
+  p
+    strong 3dMap
+    '&nbsp; to generator map 3d wczytywanych z plików CSV. Projekt został wykonany na zaliczenie przedmiotu "Inżynieria e-systemów, Technologia JAVA".
 
-.section 5. Podziel się swoim dziełem!
+  p
+    strong Projekt prezentuje takie funkcje, jak:
+    ul
+      li Logowanie i rejestracja użytkowników
+      li Wysyłanie maili kontaktowych (przechwytywane przez narzędzie mailtrap).
+      li Wyświetlanie map
+      li Generowanie losowych map i zapisywanie ich do pliku
+      li Wczytywanie map z pliku CSV
 
-br
-
-.section
-  h2.title Najnowsze mapy
-  ul
-    = render @maps
-
-- if can? :create, Map
-  = link_to "Dodaj nową", new_user_map_path(current_user), class: "btn btn-primary"
+  p
+    = "Autorem projektu jest "
+    = link_to "Sebastian wilgosz", "http://wilgosz.pl"

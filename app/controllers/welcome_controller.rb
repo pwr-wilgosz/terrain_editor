@@ -1,9 +1,9 @@
 class WelcomeController < ApplicationController
   def index
+    @maps = Map.all
   end
 
   def about
-    @maps = Map.all
   end
 
   def contact

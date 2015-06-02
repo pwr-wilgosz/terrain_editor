@@ -1,3 +1,70 @@
 // Place all the styles related to the welcome controller here.
 // They will automatically be included in application.css.
 // You can use Sass here: http://sass-lang.com/
+
+body
+  background: #5D646B
+
+  & > .container
+    background: asset-url("bg.png") no-repeat
+    background-size: 60%
+    height: 100%
+  a
+    color: #00D7C3
+
+  h1, h2, h3, h4, h5, h6
+    color: #fff
+
+  .text-block
+    border: 1px solid #00D7C3
+    border-radius: 10px
+    -webkit-border-radius: 10px
+    -moz-border-radius: 10px
+    background-color: #D3D3D3
+
+    a
+      color: #5D646B
+      text-decoration: underline
+  p
+    padding: 15px
+    font-size: 16px
+
+.title
+  color: fff !important
+
+.navbar-default
+  background-color: #000
+  .navbar-nav li a
+    color: #fff
+    &:hover, &:active
+      color: #00D7C3
+  .navbar-brand
+    color: #00D7C3
+
+.form-wrapper
+  max-width: 800px
+  margin: auto
+
+  form
+    overflow: hidden
+
+footer
+  position: fixed
+  bottom: 5px
+  right: 50px
+  text-align: right
+
+.btn-default
+  color: #fff
+  background-color: #00D7C3
+  float: right
+  border: none
+
+.btn-file
+  float: left
+
+.action-links
+  margin: 10px 0
+  a
+    color: #fff
+    margin-right: 10px

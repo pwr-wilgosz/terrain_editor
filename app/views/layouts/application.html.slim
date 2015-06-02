@@ -32,13 +32,9 @@ html lang="en"
           = render "layouts/main_nav", additional_class: "navbar-nav"
     .container
       .row
-        .col-lg-9
+        .col-lg-12
           = bootstrap_flash
           = yield
-        .col-lg-3
-          .well.sidebar-nav
-            h3 Sidebar
-            = render "layouts/main_nav", additional_class: "nav-list"
 
       footer
         p &copy; Sebastian Wilgosz

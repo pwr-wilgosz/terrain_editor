@@ -12,8 +12,8 @@ Rails.application.routes.draw do
   end
   resources :contact_messages, only: :create
   authenticated do
-    root 'maps#index'
+    root 'welcome#index'
   end
 
-  root 'welcome#about', as: "guest_root"
+  root 'welcome#index', as: "guest_root"
 end
