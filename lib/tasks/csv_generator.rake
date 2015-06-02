@@ -12,7 +12,8 @@ namespace :csv do
       r << { x: newx, y: newy, z: point.z }
     end
 
-    new_map = Map.create(name: "Some name")
+    new_map = Map.new(name: "Some name")
+    new_map.save(validate: false) #skip file validation for genaritng one
     map_id = new_map.id
     point_objects = new_map.points.new(points)
 
