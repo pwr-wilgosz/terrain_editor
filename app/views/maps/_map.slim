@@ -1,7 +1,7 @@
 li
   span.name = link_to map.name, map
-  span.user = t(".made_by", author:  map.user).html_safe
   span.actions
     = link_to t(".edit"), edit_map_path(map) if can? :edit, map
+  span.user = map.user
 
 

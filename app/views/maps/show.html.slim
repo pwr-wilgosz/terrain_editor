@@ -7,6 +7,10 @@ p#notice = notice
     span
       strong Made by:
       = " #{ @map.user }"
+  = link_to map_path(@map.prev_map), class: "prev" do
+    i.fa.fa-arrow-left.fa-5x
   .content
     .play-btn
       i.fa.fa-pause.fa-2x
+  = link_to map_path(@map.next_map), class: "next" do
+    i.fa.fa-arrow-right.fa-5x

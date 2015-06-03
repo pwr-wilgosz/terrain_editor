@@ -1,0 +1,78 @@
+\documentclass[10pt]{report}
+\setlength{\parindent}{10pt}
+\setlength{\parskip}{0,9em}
+\usepackage{indentfirst}
+\usepackage[margin=1in, paperwidth=8.5in, paperheight=11in]{geometry}
+\usepackage{hyperref}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{polski}
+\usepackage[polish]{babel}
+\usepackage{lmodern}
+\usepackage{multirow}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+\usepackage{placeins}
+\usepackage{courier}
+\usepackage{listings}
+\usepackage{color}
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codeorange}{rgb}{1,0.54,0}
+\lstdefinestyle{CppStyle}{
+  belowcaptionskip=1\baselineskip,
+  breakatwhitespace=false,
+  breaklines=true,
+  captionpos=b, 
+  frame=below,
+  aboveskip=20pt,
+  belowskip = 10pt,
+  language=C++,
+  showstringspaces=false,
+  showspaces=false,
+  numbersep=5pt,
+  numbers=left,  
+  numberstyle=\small,
+  commentstyle=\color{codegreen},
+  keywordstyle=\color{magenta},
+  stringstyle=\color{codeorange},
+  basicstyle=\small\ttfamily,
+}
+\lstset{escapechar=@,style=CppStyle}
+
+\title{Projekt realizowany na zajęcia 'inżynierii e-systemów w technologii JAVA'}
+\author{
+	\textit{\textbf{Autor:}Sebastian Wilgosz}\\
+}
+ 
+\makeatletter
+\renewcommand{\maketitle}{
+\begin{titlepage}
+    \begin{center}
+        \vspace*{1cm}
+        \large{Informatyka, Wydział Elektroniki Politechniki Wrocławskiej}\par
+        \vspace*{3,5cm}
+        \LARGE\textbf{Edytor map 3D}\par
+        \vspace {10mm}
+        \large\textbf{\@title}\par
+        \vspace{5cm}
+    
+    	\large{\@author}\par   	  		
+    	\vspace {10mm}
+    	
+    	\large\textbf{\textit{Prowadzący:}}\\
+       	\large\textbf{dr inż. Tomasz Walkowiak}\par
+        \vspace{3cm}
+        \small \@date
+    \end{center}
+\end{titlepage}
+}
+\makeatother
+
+\begin{document}
+\maketitle
+\tableofcontents
+\newpage
+
+\input{chapters/intro.tex}
+
+\end{document}

@@ -18,4 +18,5 @@
 /**/*.log
 /**/*.toc
 /**/*.aux
-/**/*.syntex.gz
+/**/*.out
+/**/*.synctex.gz

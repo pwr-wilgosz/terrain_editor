@@ -1,6 +1,7 @@
-h1 Ostatnio dodane mapy
+#map-wrapper
+  = link_to "Dodaj nową", new_user_map_path(current_user), class: "btn btn-default"
+  h1 Ostatnio dodane mapy
 
-ul
-  = render @maps
+  ul.map-list
+    = render @maps
 
-= link_to "Dodaj nową", new_user_map_path(current_user), class: "btn btn-primary"

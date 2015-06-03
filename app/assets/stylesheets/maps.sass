@@ -3,7 +3,7 @@ body, html
   padding: 0
   width: 100%
   height: 100%
-  overflow: hidden
+  overflow-y: auto
 
 canvas
   position: absolute
@@ -13,6 +13,7 @@ canvas
 #map-wrapper
   max-width: 900px
   margin: auto
+  position: relative
   .header
     color: #fff
     a
@@ -31,3 +32,27 @@ canvas
     z-index: 9
     i
       color: #fff
+
+  .prev, .next
+    position: absolute
+    top: 48%
+
+  .prev
+    left: -80px
+
+  .next
+    right: -80px
+
+.map-list
+  background-color: #000
+  li
+    color: #fff
+    font-size: 18px
+    padding: 10px
+    display: block
+  .name
+    padding-right: 10px
+
+  .actions, .user
+    float: right
+    padding-right: 10px

@@ -17,6 +17,24 @@ class Map < ActiveRecord::Base
     edges.select(:source_id, :target_id).reduce([]) { |r, edge| r << [point_list.index(edge.source_id), point_list.index(edge.target_id) ] }
   end
 
+  def next_map
+    list = Map.all.pluck(:id).sort
+    if id == list.last
+      Map.find(list.first)
+    else
+      Map.find(list.index(id)+2)
+    end
+  end
+
+  def prev_map
+    list = Map.all.pluck(:id).sort
+    if id == list.first
+      Map.find(list.last)
+    else
+      Map.find(list.index(id))
+    end
+  end
+
   def import
     return if file.blank?
     csv = Roo::Spreadsheet.open(file)

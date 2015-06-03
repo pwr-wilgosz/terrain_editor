@@ -1,5 +1,6 @@
 ul.nav class== additional_class
   li = link_to t(".about"), about_path
+  li = link_to t(".maps"), maps_path
   li = link_to t(".contact"), contact_path
   - if current_user
     li = link_to t(".logout"), destroy_user_session_path, method: :delete

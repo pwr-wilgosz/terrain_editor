@@ -1,20 +1,20 @@
 \chapter{Cel i zakres projektu}
 \section{Zakres projektu}
 Niniejszy projekt będzie zawierał opis techniczny i specyfikację kroków, wykorzystania narzędzi niezbędnych do stworzenia aplikacji w środowisku \textbf{Java IEE} .
-Projekt będzie uwzględniał następujące etapy : 
+Projekt będzie uwzględniał następujące etapy :
 \begin{enumerate}
-\item{Analiza i Specyfikacja}
-\item{Projektowanie}
-\item{Implementacja}
-\item{Testy}
-\item{Ocena i Optymalizacja}
+  \item{Analiza i Specyfikacja}
+  \item{Projektowanie}
+  \item{Implementacja}
+  \item{Testy}
+  \item{Ocena i Optymalizacja}
 \end{enumerate}
 
 \section{Cel projektu}
-Celem projektu jest wykonanie aplikacji serwerowej. 
+Celem projektu jest wykonanie aplikacji serwerowej.
 Aplikacja będzie budowana w oparciu o technologię \textbf{Java IEE}.
 Sam sposób wdrożenia programu jak i jego zadania wraz z implementacją będą przebiegały wedle przedstawionego pomysłu, który został wstępnie zaakceptowany przez prowadzącego kurs.
-Projekt ma na celu zapoznać Studentów specjalizacji Inżynieria Internetowa z procesem 
+Projekt ma na celu zapoznać Studentów specjalizacji Inżynieria Internetowa z procesem
 budowania oprogramowania obecnie stosowanego w świecie aplikacji serwerowych.
 Projekt dodatkowo dzięki wybranemu tematowi pomoże zgłębić technologie strony klienckiej
 takie jak \textbf{WebGL} i \textbf{JavaScript}
@@ -27,23 +27,26 @@ Tworzone przez użytkowników prace można będzie łączyć, zlecać wykonanie 
 Nasz serwis z aplikacją nazwaliśmy \\\textbf{\textit{"Avalanche"}} \textit{[eng. lawina]}, w dalszej części projektowania i założeń podamy bliższe szczegóły naszych kroków projektowych.
 Aplikację w przyszłości może uda rozwinąć się do dużo ciekawszych zastosowań.
 \section{Specyfikacja wymagań funkcjonalnych}
-\boxy{Prezentacja bazy punktów w formie mapy}{Jest to główna funkcja tej aplikacji, ma ona za zadnie z zadanego zbioru danych generować podgląd danego terenu w formie obrotowej mapki w przestrzeni trójwymiarowej.}
+\begin{enumerate}
+  \item{Prezentacja bazy punktów w formie mapy}{Jest to główna funkcja tej aplikacji, ma ona za zadnie z zadanego zbioru danych generować podgląd danego terenu w formie obrotowej mapki w przestrzeni trójwymiarowej.}
 \newpage
-\boxy{Oddzielne sesje dla każdego użytkownika}{Ponieważ aplikacja będzie zawierała w sobie proces tworzenia jakiegoś elementu terenu niezbędne będzie wyodrębnienie pojedynczych działań na aplikacji w formie sesji użytkowników, którzy swoje gotowe mapki będą mogli dzięki powiązaniu z kontem przechowywać w zdalnej przestrzeni dyskowej} 
-\boxy{Wczytywanie mapek z pliku}{Poza wczytywaniem mapek z bazy serwera możliwe będzie wczytywanie wcześniej zapisanych mapek z pliku. Funkcjonalność taka będzie przydatna gdy użytkownik po wykasowaniu maki bądź usunięciu konta, chciałby odtworzyć swoje prace}
-\boxy{Łączenie kilku prac w jedną}{Serwer będzie mógł według kilku definiowanych zasad łączyć kilka zasobów w jedną wspólną mapę, taka funkcjonalność będzie przydatna przy tworzeniu pracy opartej na wkładzie kilku użytkowników}
-\boxy{Generacja map}{Generacja mapek na podstawie już istniejącej z podanymi zasadami zmiany oraz tworzenie totalnie losowej mapy}
-\boxy{Zapisywanie prac na serwerze}{Każda stworzona mapka będzie dostępna niezależnie od miejsca i sprzętu użytkownika poprzez interfejs webowy dostępny w przeglądarce internetowej}
-\boxy{Eksport gotowych prac do określonych formatów}{Każdą z gotowych prac będzie można wyeksportować do formatu możliwego do użytku w celu prezentacji/wizualizacji z założenia są to formaty 
+  \item{Oddzielne sesje dla każdego użytkownika}{Ponieważ aplikacja będzie zawierała w sobie proces tworzenia jakiegoś elementu terenu niezbędne będzie wyodrębnienie pojedynczych działań na aplikacji w formie sesji użytkowników, którzy swoje gotowe mapki będą mogli dzięki powiązaniu z kontem przechowywać w zdalnej przestrzeni dyskowej}
+  \item{Wczytywanie mapek z pliku}{Poza wczytywaniem mapek z bazy serwera możliwe będzie wczytywanie wcześniej zapisanych mapek z pliku. Funkcjonalność taka będzie przydatna gdy użytkownik po wykasowaniu maki bądź usunięciu konta, chciałby odtworzyć swoje prace}
+  \item{Łączenie kilku prac w jedną}{Serwer będzie mógł według kilku definiowanych zasad łączyć kilka zasobów w jedną wspólną mapę, taka funkcjonalność będzie przydatna przy tworzeniu pracy opartej na wkładzie kilku użytkowników}
+  \item{Generacja map}{Generacja mapek na podstawie już istniejącej z podanymi zasadami zmiany oraz tworzenie totalnie losowej mapy}
+  \item{Zapisywanie prac na serwerze}{Każda stworzona mapka będzie dostępna niezależnie od miejsca i sprzętu użytkownika poprzez interfejs webowy dostępny w przeglądarce internetowej}
+  \item{Eksport gotowych prac do określonych formatów}{Każdą z gotowych prac będzie można wyeksportować do formatu możliwego do użytku w celu prezentacji/wizualizacji z założenia są to formaty
 \textbf{*.pdf *.jpeg}.}
-
+\end{enumerate}
 
 \section{Specyfikacja wymagań niefunkcjonalnych}
-\setcounter{boxCount}{1}
-\boxy{Przejrzysty interfejs webowy}{Wymaganiem jest by aplikacja była nie przeładowana dodatkami i prosta w obsłudze dla osób nie posiadających zdolności programistycznych}
-\boxy{Szybkość i oszczędność łącza}{Aplikacja powinna większość pracy wykonywać bez potrzeby generowania zbędnego ruchu sieciowego co pomoże zaoszczędzić zasoby klienta}
-\boxy{Multiplatformowość}{Aplikacja powinna generować taki sam rezultat niezależnie od platformy sprzętowej klienta}
-\boxy{Baza danych MySQL}{Zasób danych powinien być przechowywany na łatwej w obsłudze i bezpłatnej dystrybucji bazy danych, takiej jak np. \textbf{MySQL}}
-\boxy{Dane o twórcach jak i projekcie}{Aplikacja będzie zawierała informacje o okolicznościach w jakich powstała i dla jakich celów}
-\boxy{Model MVC}{Aplikacja będzie opierać się na modelu MVC}
-\boxy{Dokumentacja}{Przebieg procesu powstawania jak i opis funkcjonalności i sposób wykorzystania poszczególnych funkcji będzie zawarty w dokumentacji projektu}
+
+\begin{enumerate}
+  \item{Przejrzysty interfejs webowy}{Wymaganiem jest by aplikacja była nie przeładowana dodatkami i prosta w obsłudze dla osób nie posiadających zdolności programistycznych}
+  \item{Szybkość i oszczędność łącza}{Aplikacja powinna większość pracy wykonywać bez potrzeby generowania zbędnego ruchu sieciowego co pomoże zaoszczędzić zasoby klienta}
+  \item{Multiplatformowość}{Aplikacja powinna generować taki sam rezultat niezależnie od platformy sprzętowej klienta}
+  \item{Baza danych MySQL}{Zasób danych powinien być przechowywany na łatwej w obsłudze i bezpłatnej dystrybucji bazy danych, takiej jak np. \textbf{MySQL}}
+  \item{Dane o twórcach jak i projekcie}{Aplikacja będzie zawierała informacje o okolicznościach w jakich powstała i dla jakich celów}
+  \item{Model MVC}{Aplikacja będzie opierać się na modelu MVC}
+  \item{Dokumentacja}{Przebieg procesu powstawania jak i opis funkcjonalności i sposób wykorzystania poszczególnych funkcji będzie zawarty w dokumentacji projektu}
+\end{enumerate}

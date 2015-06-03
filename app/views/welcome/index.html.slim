@@ -1,22 +1,12 @@
-h2.title Edytor map 3d
-
-.section
-  p 1. Stwórz mapę
-.section
-  p 2. Zaimportuj
-.section
-  p 3. Prezentuj
-.section
-  p 4. Edytuj
-
-.section 5. Podziel się swoim dziełem!
+.slide-wrapper
+  .section.odd.step1 = image_tag "step1.png"
+  .section.even.step2 = image_tag "step2.png"
+  .section.odd.step3 = image_tag "step3.png"
+  .section.even.step4 = image_tag "step4.png"
+  .section.odd.step5 = image_tag "step5.png"
 
 br
 
-.section
-  h2.title Najnowsze mapy
-  ul
-    = render @maps
-
-- if can? :create, Map
-  = link_to "Dodaj nową", new_user_map_path(current_user), class: "btn btn-primary"
+h2
+  'Edytor map
+  = link_to "Dodaj mapę", new_user_map_path(current_user), class: "btn btn-default"
