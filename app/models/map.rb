@@ -10,7 +10,7 @@ class Map < ActiveRecord::Base
   validates :name, presence: true
   validates :file, presence: true, on: :create
 
-  after_create :import
+  after_save :import
 
   def simplified_edges
     point_list = points.pluck(:id).sort
@@ -21,6 +21,8 @@ class Map < ActiveRecord::Base
     list = Map.all.pluck(:id).sort
     if id == list.last
       Map.find(list.first)
+    elsif list.length == 2
+      Map.find(list.last)
     else
       Map.find(list.index(id)+2)
     end
@@ -30,6 +32,8 @@ class Map < ActiveRecord::Base
     list = Map.all.pluck(:id).sort
     if id == list.first
       Map.find(list.last)
+    elsif list.length == 2
+      Map.find(list.first)
     else
       Map.find(list.index(id))
     end
@@ -37,6 +41,8 @@ class Map < ActiveRecord::Base
 
   def import
     return if file.blank?
+    self.points.destroy_all
+    self.edges.destroy_all
     csv = Roo::Spreadsheet.open(file)
     sheet = csv.sheet(0)
     tmp = []

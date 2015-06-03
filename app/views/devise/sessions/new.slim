@@ -1,5 +1,5 @@
 .form-wrapper
-  h2 Log in
+  h2 Zaloguj się
 
   = simple_form_for(resource, as: resource_name, url: session_path(resource_name), html: { class: 'form-horizontal'}) do |f|
     = f.error_notification
@@ -8,4 +8,4 @@
       = f.input :email, required: true, autofocus: true, placeholder: "Wpisz swój email", label: false
       = f.input :password, required: true, placeholder: "Hasło", label: false
     .form-actions
-      = f.button :submit, "Log in", class: "btn btn-default"
+      = f.button :submit, "Zaloguj", class: "btn btn-default"
