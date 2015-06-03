@@ -30,18 +30,20 @@ Nasz serwis z aplikacją nazwałem \textbf{\textit{"3dMap"}}, ze względu na kr�
 
 \section{Specyfikacja wymagań funkcjonalnych}
 \begin{enumerate}
+  \item \textbf{Wysyłanie emaili kontaktowych} - użytkownicy powinni mieć możliwość wysyłania maili do administratorów w razie problemów.
+
   \item \textbf{Prezentacja bazy punktów w formie mapy} - Jest to główna funkcja tej aplikacji, ma ona za zadnie z zadanego zbioru danych generować podgląd danego terenu w formie obrotowej mapki w przestrzeni trójwymiarowej.
 
   \item \textbf{Oddzielne sesje dla każdego użytkownika} - Ponieważ aplikacja będzie zawierała w sobie proces tworzenia jakiegoś elementu terenu niezbędne będzie wyodrębnienie pojedynczych działań aplikacji w formie sesji użytkowników, którzy swoje gotowe mapy będą mogli dzięki powiązaniu z kontem przechowywać w zdalnej przestrzeni dyskowej
-
+  
   \item \textbf{Wczytywanie map z pliku} - Poza wczytywaniem map z bazy serwera możliwe będzie wczytywanie wcześniej zapisanych map z pliku. Funkcjonalność taka będzie przydatna gdy użytkownik po wykasowaniu mapy bądź usunięciu konta, chciałby odtworzyć swoje prace.
-
+  
   \item \textbf{Łączenie kilku prac w jedną} - Serwer będzie mógł według kilku definiowanych zasad łączyć kilka zasobów w jedną wspólną mapę, taka funkcjonalność będzie przydatna przy tworzeniu pracy opartej na wkładzie kilku użytkowników
-
+  
   \item \textbf{Generacja map} - Generacja map na podstawie już istniejącej z podanymi zasadami zmiany oraz tworzenie totalnie losowej mapy
-
+  
   \item \textbf{Zapisywanie prac na serwerze} - Każda stworzona mapa będzie dostępna niezależnie od miejsca i sprzętu użytkownika poprzez interfejs webowy dostępny w przeglądarce internetowej
-
+  
   \item{Eksport gotowych prac do określonych formatów}{Każdą z gotowych prac będzie można wyeksportować do formatu możliwego do użytku w celu prezentacji/wizualizacji z założenia są to formaty \textbf{*.pdf *.jpeg}.}
 \end{enumerate}
 
@@ -55,10 +57,10 @@ Nasz serwis z aplikacją nazwałem \textbf{\textit{"3dMap"}}, ze względu na kr�
   \item \textbf{Multiplatformowość} - Aplikacja powinna generować taki sam rezultat niezależnie od platformy sprzętowej klienta
 
   \item \textbf{Baza danych MySQL} - Zasób danych powinien być przechowywany na łatwej w obsłudze i bezpłatnej dystrybucji bazy danych, takiej jak np. \textbf{MySQL}
-
+  
   \item \textbf{Dane o twórcach jak i projekcie} - Aplikacja będzie zawierała informacje o okolicznościach w jakich powstała i dla jakich celów
-
+  
   \item \textbf{Model MVC} - Aplikacja będzie opierać się na modelu MVC
-
+  
   \item \textbf{Dokumentacja} - Przebieg procesu powstawania jak i opis funkcjonalności i sposób wykorzystania poszczególnych funkcji będzie zawarty w dokumentacji projektu
 \end{enumerate}

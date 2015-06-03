@@ -1,0 +1,47 @@
+\chapter{Podsumowanie}
+\label{summary}
+
+\textbf{Projekt był początkowo z przeznaczony dla dwóch osób}. Niestety, dwa tygodnie przed oddaniem drugi członek zespołu zrezygnował z kontynuowania nauki, nie dołączając żadnego wkładu ze swojej strony.
+
+Z tego powodu nie udało mi się wykonać wszystkich funkcji, jakie zostały założone w specyfikacji początkowej.
+
+\section{Wykonane założenia}
+
+\begin{enumerate}
+\item \textbf{Wysyłanie emaili kontaktowych} - użytkownicy powinni mieć możliwość wysyłania maili do administratorów w razie problemów.
+
+  \item \textbf{Prezentacja bazy punktów w formie mapy} - Jest to główna funkcja tej aplikacji, ma ona za zadnie z zadanego zbioru danych generować podgląd danego terenu w formie obrotowej mapki w przestrzeni trójwymiarowej.
+
+  \item \textbf{Oddzielne sesje dla każdego użytkownika} - Ponieważ aplikacja będzie zawierała w sobie proces tworzenia jakiegoś elementu terenu niezbędne będzie wyodrębnienie pojedynczych działań aplikacji w formie sesji użytkowników, którzy swoje gotowe mapy będą mogli dzięki powiązaniu z kontem przechowywać w zdalnej przestrzeni dyskowej
+  
+  \item \textbf{Wczytywanie map z pliku} - Poza wczytywaniem map z bazy serwera możliwe będzie wczytywanie wcześniej zapisanych map z pliku. Funkcjonalność taka będzie przydatna gdy użytkownik po wykasowaniu mapy bądź usunięciu konta, chciałby odtworzyć swoje prace.
+  
+  \item \textbf{Generacja map} - Generacja map na podstawie już istniejącej z podanymi zasadami zmiany oraz tworzenie totalnie losowej mapy
+  
+  \item \textbf{Zapisywanie prac na serwerze} - Każda stworzona mapa będzie dostępna niezależnie od miejsca i sprzętu użytkownika poprzez interfejs webowy dostępny w przeglądarce internetowej
+  
+  \item \textbf{Przejrzysty interfejs webowy} - Wymaganiem jest by aplikacja była nie przeładowana dodatkami i prosta w obsłudze dla osób nie posiadających zdolności programistycznych
+
+  \item \textbf{Szybkość i oszczędność łącza} - Aplikacja powinna większość pracy wykonywać bez potrzeby generowania zbędnego ruchu sieciowego co pomoże zaoszczędzić zasoby klienta
+
+  \item \textbf{Multiplatformowość} - Aplikacja powinna generować taki sam rezultat niezależnie od platformy sprzętowej klienta
+
+  \item \textbf{Baza danych MySQL} - Zasób danych powinien być przechowywany na łatwej w obsłudze i bezpłatnej dystrybucji bazy danych, takiej jak np. \textbf{MySQL}
+  
+  \item \textbf{Dane o twórcach jak i projekcie} - Aplikacja będzie zawierała informacje o okolicznościach w jakich powstała i dla jakich celów
+  
+  \item \textbf{Model MVC} - Aplikacja opiera się na modelu MVC
+  
+  \item \textbf{Dokumentacja} - Przebieg procesu powstawania jak i opis funkcjonalności i sposób wykorzystania poszczególnych funkcji będzie zawarty w dokumentacji projektu
+\end{enumerate}
+
+
+
+\section{Niewykonane założenia}
+
+\begin{enumerate}
+  \item{Eksport gotowych prac do określonych formatów}{Każdą z gotowych prac będzie można wyeksportować do formatu możliwego do użytku w celu prezentacji/wizualizacji z założenia są to formaty \textbf{*.pdf *.jpeg}.}
+
+  \item \textbf{Łączenie kilku prac w jedną} - Serwer będzie mógł według kilku definiowanych zasad łączyć kilka zasobów w jedną wspólną mapę, taka funkcjonalność będzie przydatna przy tworzeniu pracy opartej na wkładzie kilku użytkowników
+  
+\end{enumerate}
