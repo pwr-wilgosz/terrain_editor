@@ -1,7 +1,18 @@
 \chapter{Cel i zakres projektu}
+\section{Cel projektu}
+Celem projektu jest wykonanie aplikacji serwerowej w technologii Ruby on Rails, pozwalającej na zarządzanie mapami 3d budowanymi na podstawie plików CSV.
+
+Sam sposób wdrożenia programu jak i jego zadania wraz z implementacją przebiegały wedle przedstawionego pomysłu, który został zaakceptowany przez prowadzącego kurs.
+Projekt miał na celu zapoznać studentów specjalizacji \textit{Inżynieria Internetowa} z procesem
+budowania oprogramowania obecnie stosowanego w świecie aplikacji serwerowych.
+Projekt dodatkowo dzięki wybranemu tematowi pomógł zgłębić technologie strony klienckiej
+takie jak \textbf{JavaScript}.
+
 \section{Zakres projektu}
-Niniejszy projekt będzie zawierał opis techniczny i specyfikację kroków, wykorzystania narzędzi niezbędnych do stworzenia aplikacji w środowisku \textbf{Java IEE} .
-Projekt będzie uwzględniał następujące etapy :
+Niniejszy projekt zawiera opis użytkowy i techniczny aplikacji oraz wykorzystanych narzędzi niezbędnych do stworzenia aplikacji w środowisku \textbf{Ruby on Rails} .
+
+Proces tworzenia oprogramowania został podzielony na następujące etapy:
+
 \begin{enumerate}
   \item{Analiza i Specyfikacja}
   \item{Projektowanie}
@@ -10,43 +21,44 @@ Projekt będzie uwzględniał następujące etapy :
   \item{Ocena i Optymalizacja}
 \end{enumerate}
 
-\section{Cel projektu}
-Celem projektu jest wykonanie aplikacji serwerowej.
-Aplikacja będzie budowana w oparciu o technologię \textbf{Java IEE}.
-Sam sposób wdrożenia programu jak i jego zadania wraz z implementacją będą przebiegały wedle przedstawionego pomysłu, który został wstępnie zaakceptowany przez prowadzącego kurs.
-Projekt ma na celu zapoznać Studentów specjalizacji Inżynieria Internetowa z procesem
-budowania oprogramowania obecnie stosowanego w świecie aplikacji serwerowych.
-Projekt dodatkowo dzięki wybranemu tematowi pomoże zgłębić technologie strony klienckiej
-takie jak \textbf{WebGL} i \textbf{JavaScript}
-
 \chapter{Analiza i Specyfikacja}
 \section{Opis słowny zadania}
-Celem naszej pracy projektowej jest stworzenie aplikacji zdolnej do tworzenia i zarządzania mapkami 3d terenu.
+Celem pracy projektowej jest stworzenie aplikacji zdolnej do tworzenia i zarządzania mapami 3d terenu.
 Niniejsza aplikacja serwerowa ma za zadanie wspomagać tworzenia ciekawych wizualizacji terenu dla osób zajmujących się hobbystycznie jak i zawodowo kartografią.
-Tworzone przez użytkowników prace można będzie łączyć, zlecać wykonanie na nich danych obliczeń w celu wykorzystania ich w danym problemie.
-Nasz serwis z aplikacją nazwaliśmy \\\textbf{\textit{"Avalanche"}} \textit{[eng. lawina]}, w dalszej części projektowania i założeń podamy bliższe szczegóły naszych kroków projektowych.
-Aplikację w przyszłości może uda rozwinąć się do dużo ciekawszych zastosowań.
+Docelowo tworzone przez użytkowników prace można będzie łączyć, zlecać wykonanie na nich danych obliczeń w celu wykorzystania ich w danym problemie.
+Nasz serwis z aplikacją nazwałem \textbf{\textit{"3dMap"}}, ze względu na krótką i intuicyjną nazwę. Aplikację w przyszłości będzie można rozwinąć w celu szerszych zastosowań.
+
 \section{Specyfikacja wymagań funkcjonalnych}
 \begin{enumerate}
-  \item{Prezentacja bazy punktów w formie mapy}{Jest to główna funkcja tej aplikacji, ma ona za zadnie z zadanego zbioru danych generować podgląd danego terenu w formie obrotowej mapki w przestrzeni trójwymiarowej.}
-\newpage
-  \item{Oddzielne sesje dla każdego użytkownika}{Ponieważ aplikacja będzie zawierała w sobie proces tworzenia jakiegoś elementu terenu niezbędne będzie wyodrębnienie pojedynczych działań na aplikacji w formie sesji użytkowników, którzy swoje gotowe mapki będą mogli dzięki powiązaniu z kontem przechowywać w zdalnej przestrzeni dyskowej}
-  \item{Wczytywanie mapek z pliku}{Poza wczytywaniem mapek z bazy serwera możliwe będzie wczytywanie wcześniej zapisanych mapek z pliku. Funkcjonalność taka będzie przydatna gdy użytkownik po wykasowaniu maki bądź usunięciu konta, chciałby odtworzyć swoje prace}
-  \item{Łączenie kilku prac w jedną}{Serwer będzie mógł według kilku definiowanych zasad łączyć kilka zasobów w jedną wspólną mapę, taka funkcjonalność będzie przydatna przy tworzeniu pracy opartej na wkładzie kilku użytkowników}
-  \item{Generacja map}{Generacja mapek na podstawie już istniejącej z podanymi zasadami zmiany oraz tworzenie totalnie losowej mapy}
-  \item{Zapisywanie prac na serwerze}{Każda stworzona mapka będzie dostępna niezależnie od miejsca i sprzętu użytkownika poprzez interfejs webowy dostępny w przeglądarce internetowej}
-  \item{Eksport gotowych prac do określonych formatów}{Każdą z gotowych prac będzie można wyeksportować do formatu możliwego do użytku w celu prezentacji/wizualizacji z założenia są to formaty
-\textbf{*.pdf *.jpeg}.}
+  \item \textbf{Prezentacja bazy punktów w formie mapy} - Jest to główna funkcja tej aplikacji, ma ona za zadnie z zadanego zbioru danych generować podgląd danego terenu w formie obrotowej mapki w przestrzeni trójwymiarowej.
+
+  \item \textbf{Oddzielne sesje dla każdego użytkownika} - Ponieważ aplikacja będzie zawierała w sobie proces tworzenia jakiegoś elementu terenu niezbędne będzie wyodrębnienie pojedynczych działań aplikacji w formie sesji użytkowników, którzy swoje gotowe mapy będą mogli dzięki powiązaniu z kontem przechowywać w zdalnej przestrzeni dyskowej
+
+  \item \textbf{Wczytywanie map z pliku} - Poza wczytywaniem map z bazy serwera możliwe będzie wczytywanie wcześniej zapisanych map z pliku. Funkcjonalność taka będzie przydatna gdy użytkownik po wykasowaniu mapy bądź usunięciu konta, chciałby odtworzyć swoje prace.
+
+  \item \textbf{Łączenie kilku prac w jedną} - Serwer będzie mógł według kilku definiowanych zasad łączyć kilka zasobów w jedną wspólną mapę, taka funkcjonalność będzie przydatna przy tworzeniu pracy opartej na wkładzie kilku użytkowników
+
+  \item \textbf{Generacja map} - Generacja map na podstawie już istniejącej z podanymi zasadami zmiany oraz tworzenie totalnie losowej mapy
+
+  \item \textbf{Zapisywanie prac na serwerze} - Każda stworzona mapa będzie dostępna niezależnie od miejsca i sprzętu użytkownika poprzez interfejs webowy dostępny w przeglądarce internetowej
+
+  \item{Eksport gotowych prac do określonych formatów}{Każdą z gotowych prac będzie można wyeksportować do formatu możliwego do użytku w celu prezentacji/wizualizacji z założenia są to formaty \textbf{*.pdf *.jpeg}.}
 \end{enumerate}
 
 \section{Specyfikacja wymagań niefunkcjonalnych}
 
 \begin{enumerate}
-  \item{Przejrzysty interfejs webowy}{Wymaganiem jest by aplikacja była nie przeładowana dodatkami i prosta w obsłudze dla osób nie posiadających zdolności programistycznych}
-  \item{Szybkość i oszczędność łącza}{Aplikacja powinna większość pracy wykonywać bez potrzeby generowania zbędnego ruchu sieciowego co pomoże zaoszczędzić zasoby klienta}
-  \item{Multiplatformowość}{Aplikacja powinna generować taki sam rezultat niezależnie od platformy sprzętowej klienta}
-  \item{Baza danych MySQL}{Zasób danych powinien być przechowywany na łatwej w obsłudze i bezpłatnej dystrybucji bazy danych, takiej jak np. \textbf{MySQL}}
-  \item{Dane o twórcach jak i projekcie}{Aplikacja będzie zawierała informacje o okolicznościach w jakich powstała i dla jakich celów}
-  \item{Model MVC}{Aplikacja będzie opierać się na modelu MVC}
-  \item{Dokumentacja}{Przebieg procesu powstawania jak i opis funkcjonalności i sposób wykorzystania poszczególnych funkcji będzie zawarty w dokumentacji projektu}
+  \item \textbf{Przejrzysty interfejs webowy} - Wymaganiem jest by aplikacja była nie przeładowana dodatkami i prosta w obsłudze dla osób nie posiadających zdolności programistycznych
+
+  \item \textbf{Szybkość i oszczędność łącza} - Aplikacja powinna większość pracy wykonywać bez potrzeby generowania zbędnego ruchu sieciowego co pomoże zaoszczędzić zasoby klienta
+
+  \item \textbf{Multiplatformowość} - Aplikacja powinna generować taki sam rezultat niezależnie od platformy sprzętowej klienta
+
+  \item \textbf{Baza danych MySQL} - Zasób danych powinien być przechowywany na łatwej w obsłudze i bezpłatnej dystrybucji bazy danych, takiej jak np. \textbf{MySQL}
+
+  \item \textbf{Dane o twórcach jak i projekcie} - Aplikacja będzie zawierała informacje o okolicznościach w jakich powstała i dla jakich celów
+
+  \item \textbf{Model MVC} - Aplikacja będzie opierać się na modelu MVC
+
+  \item \textbf{Dokumentacja} - Przebieg procesu powstawania jak i opis funkcjonalności i sposób wykorzystania poszczególnych funkcji będzie zawarty w dokumentacji projektu
 \end{enumerate}

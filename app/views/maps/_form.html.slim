@@ -3,7 +3,7 @@
 
   .form-inputs
     = f.input :name, placeholder: "Nazwa mapy", label: false
-    = f.association :user, label: false, include_blank: "<< Autor >>"
+    = f.association :user, label: false, include_blank: false, collection: [current_user]
     = f.input :file, as: :file, label: false, input_html: { class: "btn btn-file btn-default" }
   .form-actions
     = f.button :submit, "Zatwierdź"
