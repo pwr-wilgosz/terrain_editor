@@ -52,7 +52,43 @@ Na górze ekranu pojawi się wiadomość o braku uprawnień do wykonania danej a
     \end{figure}
 \FloatBarrier
 
+\subsection{Wysyłanie emaili}
 
+Aplikacja umożliwia wysłanie wiadomości kontaktowej do administratorów systemu. Z powodu udostępnienia aplikacji online, postanowiłem wyłączyć funkcję wysyłania maili na rzeczywistą skrzynkę odbiorczą. Zamiast tego zintegrowałem projekt z aplikacją \textit{Mailtrap}, która przechwytuje wszystkie emaile wysyłane z konta pocztowego. W celu rekonfiguracji konta, zobacz sekcję: \ref{dev_mailer}.
+
+\subsection{Dodawanie mapy z pliku}
+
+Dodawanie nowych map jest dostępne wyłącznie dla zalogowanych użytkowników. Jeżeli chcesz dodać mapę, będąc zalogowanym kliknij w przycisk na stronie głównej, liście map albo stornie pojedynczej mapy.
+
+\FloatBarrier
+ 	\begin{figure}[ht]
+        \centering
+        \includegraphics[width=0.90\textwidth,height=0.46\textheight]{img/add_map1.png}
+	\caption{Dodawanie mapy, krok 1}
+        \label{rys:screen_add_map1}
+    \end{figure}
+\FloatBarrier
+
+Po kliknięciu w przycisk pojawi się formularz dodawania nowej mapy. Schemat należy wczytać z odpowiednio sformatowanego pliku tekstowego.
+
+Plik powinien mieć następujący format:
+
+\begin{table}[h]
+	\centering
+	\begin{tabular}{|l|l|l|l|l|l|}
+		Source X & Source Y & Source Z & Target X & Target Y & Target Z \\ \hline
+	\end{tabular}
+	\caption{Format pliku z danymi mapy do importu.}
+	\label{tab:file_format}
+\end{table}
+
+Lub powinine być plikiem tekstowym, w którym każda linia odpowiada kolejnemu wierszowi, zaś komórki są oddzielone średnikiem (";").
+
+W celach prezentacyjnych do repozytorium zostały dołączone przykładowe pliki z danymi do zaimportowania w katalogu \textit{app/assets/csv/*}.
+	
 \section{Wersja lokalna}
 
 ubuntu/reverse
+
+\subsection{Wysyłanie emaili}
+\label{dev_mailer}

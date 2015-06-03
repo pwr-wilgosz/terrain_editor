@@ -1,7 +1,10 @@
 li
   span.name = link_to map.name, map
-  span.actions
-    = link_to t(".edit"), edit_map_path(map) if can? :edit, map
+  - if can? :manage, map
+    span.actions
+      = link_to t(".edit"), edit_map_path(map)
+      = link_to t(".destroy"), map_path(map), method: :delete
+
   span.user = map.user
 
 

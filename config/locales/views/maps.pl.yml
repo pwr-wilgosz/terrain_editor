@@ -2,3 +2,4 @@ pl:
   maps:
     map:
       edit: "Edytuj"
+      destroy: "Usuń"
